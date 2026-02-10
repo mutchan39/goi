@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>確信犯の意味、実はズレてる？｜1分クイズ＋納得解説</title>
+  <meta name="description" content="「確信犯」の本来の意味と、よくある誤用をクイズ形式で解説。なぜズレが起きるのか、正しい使い方のコツと例文でスッキリ整理します。" />
+
+  <style>
+    :root{
+      --bg:#f6f7fb;
+      --card:#ffffff;
+      --text:#111827;
+      --sub:#6b7280;
+      --border:#e5e7eb;
+      --accent:#4f46e5;
+      --accent2:#4338ca;
+      --shadow:0 10px 26px rgba(0,0,0,.08);
+      --radius:18px;
+      --max:900px;
+      --tap:48px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.9;
+    }
+    a{ color:var(--accent); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    .wrap{ max-width:var(--max); margin:0 auto; padding:18px 14px 90px; }
+
+    header{
+      background: linear-gradient(135deg, #eef2ff 0%, #ffffff 50%, #f5f3ff 100%);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:26px 18px;
+      margin:14px 0 18px;
+    }
+    .kicker{
+      display:inline-block;
+      font-size:12px;
+      color:#4b5563;
+      background:#eef2ff;
+      border:1px solid #e0e7ff;
+      padding:6px 10px;
+      border-radius:999px;
+      margin-bottom:10px;
+    }
+    header h1{
+      margin:0 0 10px;
+      font-size:clamp(22px,4.2vw,34px);
+      letter-spacing:.2px;
+      line-height:1.25;
+    }
+    header p{
+      margin:0;
+      color:var(--sub);
+      font-size:15px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:0 4px 14px rgba(0,0,0,.05);
+      padding:18px;
+      margin:14px 0;
+    }
+    h2{
+      margin:0 0 10px;
+      font-size:19px;
+      letter-spacing:.2px;
+    }
+    .lead{ margin:0; color:var(--sub); font-size:16px; }
+
+    .quiz{
+      border:1px solid #e0e7ff;
+      background:linear-gradient(180deg, rgba(79,70,229,.06), rgba(79,70,229,.02));
+      border-radius:16px;
+      padding:16px;
+      margin-top:12px;
+    }
+    .qline{
+      font-weight:700;
+      margin:0 0 10px;
+    }
+    .choices{
+      display:grid;
+      gap:10px;
+      margin-top:10px;
+    }
+    .choice{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:12px 12px;
+      background:#fff;
+    }
+    .tag{
+      min-width:30px;
+      height:30px;
+      border-radius:10px;
+      background:#eef2ff;
+      border:1px solid #e0e7ff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      color:#3730a3;
+    }
+    .choice b{ display:block; margin-bottom:4px; }
+    .choice span{ color:var(--sub); font-size:14px; }
+
+    .reveal{
+      margin-top:12px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    button{
+      appearance:none;
+      border:none;
+      border-radius:12px;
+      background:var(--accent);
+      color:#fff;
+      font-weight:700;
+      padding:12px 16px;
+      min-height:var(--tap);
+      box-shadow:0 8px 18px rgba(79,70,229,.22);
+      cursor:pointer;
+    }
+    button:hover{ background:var(--accent2); }
+    .hint{
+      color:var(--sub);
+      font-size:13px;
+    }
+
+    .answer{
+      margin-top:14px;
+      border-left:4px solid #a5b4fc;
+      background:#eef2ff;
+      border-radius:14px;
+      padding:14px 14px;
+      display:none;
+    }
+    .answer .big{
+      font-weight:900;
+      font-size:16px;
+      color:#1f2937;
+      margin:0 0 8px;
+    }
+    .answer p{ margin:0; color:#374151; }
+
+    .key{
+      display:inline-block;
+      background:#111827;
+      color:#fff;
+      border-radius:10px;
+      padding:1px 10px;
+      line-height:1.8;
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+
+    .mini{
+      color:var(--sub);
+      font-size:14px;
+      margin-top:10px;
+    }
+
+    .ex{
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:14px;
+      background:#fff;
+      margin-top:12px;
+    }
+    .ex p{ margin:0; color:#374151; }
+    .ex .lbl{
+      display:inline-block;
+      margin-bottom:8px;
+      font-size:12px;
+      color:#4b5563;
+      background:#f3f4f6;
+      border:1px solid #e5e7eb;
+      padding:5px 10px;
+      border-radius:999px;
+    }
+
+    .links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:12px;
+    }
+    .chip{
+      display:inline-block;
+      padding:10px 12px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--border);
+      color:#111827;
+      font-size:13px;
+    }
+    .chip:hover{ background:#f9fafb; text-decoration:none; }
+
+    footer{
+      margin-top:22px;
+      color:#6b7280;
+      font-size:12px;
+      line-height:1.7;
+      padding:4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="kicker">1分でスッキリ｜語彙クイズ</div>
+      <h1>「確信犯」って、どういう意味？</h1>
+      <p>知ってるつもりでも、説明しようとすると曖昧になりやすい代表格。まずはクイズでどうぞ。</p>
+    </header>
+
+    <section class="card">
+      <h2>ミニクイズ</h2>
+      <p class="lead">次のうち、「確信犯」の本来の意味に一番近いのはどれ？</p>
+
+      <div class="quiz" role="group" aria-label="確信犯クイズ">
+        <p class="qline">Q. 「確信犯」とは、どんな人（行為）？</p>
+
+        <div class="choices">
+          <div class="choice">
+            <div class="tag">A</div>
+            <div>
+              <b>悪いと分かっているのに、わざとやる人</b>
+              <span>（例：遅刻すると分かってて寝坊する、など）</span>
+            </div>
+          </div>
+
+          <div class="choice">
+            <div class="tag">B</div>
+            <div>
+              <b>正しい（善い）と信じて、あえて法律に反する行為をする人</b>
+              <span>（例：信念や思想にもとづく違法行為）</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <button type="button" id="btn">答えを表示</button>
+          <span class="hint">※クリックしても音は出ません</span>
+        </div>
+
+        <div class="answer" id="ans" aria-live="polite">
+          <p class="big">答え：<span class="key">B</span></p>
+          <p>
+            本来の「確信犯」は、<b>自分の信念・思想として「正しい」と確信して</b>法律に反する行為をすること（またはその人）を指します。
+          </p>
+        </div>
+      </div>
+
+      <p class="mini">
+        多くの人がAを選びがちなのは自然です。日常会話では「わざと悪いことをする」意味で使われる場面が多いからです。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>なぜズレが起きるのか</h2>
+      <p class="lead">
+        「確信犯」は字面だけ読むと、<b>“確信して犯す＝わざとやる”</b>に見えます。<br>
+        でも本来は、単なる「わざと」ではなく、<b>価値判断がひっくり返っている</b>のがポイントです。
+      </p>
+
+      <div class="note" style="margin-top:12px; border-left:4px solid #a5b4fc; background:#eef2ff; border-radius:14px; padding:14px;">
+        <b>ポイント：</b>「確信」の中身が「悪いと分かってる」ではなく、<b>「正しいと信じている」</b>側にあります。
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>正しい使い方（ざっくりルール）</h2>
+      <ul>
+        <li><b>信念・思想・正義感</b>が前提にある（本人は正しいと思っている）</li>
+        <li>結果として<b>法律に反する</b>（違法行為）</li>
+        <li>単なる「悪いと分かっててやる」は、厳密には別表現が自然</li>
+      </ul>
+
+      <div class="ex">
+        <span class="lbl">例（本来の意味に近い）</span>
+        <p>
+          「彼は自分の正義を貫くために違法行為に及んだ。動機を考えると、いわゆる確信犯に近い。」
+        </p>
+      </div>
+
+      <div class="ex">
+        <span class="lbl">例（よくある日常的な用法：本来とはズレ）</span>
+        <p>
+          「また同じミスしてる。確信犯でしょ。」<br>
+          ※この文脈の「確信犯」は「わざと・確信的にやってる」という意味で使われがち。
+        </p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>言い換えるなら（迷った時用）</h2>
+      <p class="lead">日常会話の「確信犯（＝わざと）」は、こう言い換えるとブレにくいです。</p>
+      <ul>
+        <li>わざと</li>
+        <li>故意（こい）</li>
+        <li>意図的</li>
+        <li>分かっていてやった</li>
+      </ul>
+      <p class="mini">「確信犯」を使うなら、信念や正義感のニュアンスが本当にあるかを一度だけ確認すると事故が減ります。</p>
+    </section>
+
+    <section class="card">
+      <h2>関連：これも混同されやすい</h2>
+      <div class="links">
+        <!-- 次のページを作ったら href を差し替え -->
+        <a class="chip" href="#" rel="nofollow">確信犯 vs 故意の違い</a>
+        <a class="chip" href="#" rel="nofollow">役不足の本来の意味</a>
+        <a class="chip" href="#" rel="nofollow">煮詰まるの本来の意味</a>
+      </div>
+      <p class="mini">リンクは後で増やしてOK。最初は3つくらいで十分回遊が作れます。</p>
+    </section>
+
+    <footer>
+      <p style="margin:0;">
+        このページは「間違えやすい日本語」を、クイズ形式で短く整理するためのページです。
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    const btn = document.getElementById('btn');
+    const ans = document.getElementById('ans');
+    btn.addEventListener('click', () => {
+      const isOpen = ans.style.display === 'block';
+      ans.style.display = isOpen ? 'none' : 'block';
+      btn.textContent = isOpen ? '答えを表示' : '答えを隠す';
+    });
+  </script>
+</body>
+</html>
+```0
